@@ -53,8 +53,6 @@ class CountdownCard extends HTMLElement {
 
     if (!this.content) {
       this.card = document.createElement('ha-card');
-
-      this.card.header = "Countdown";
       this.content = document.createElement('div');
       this.content.style.padding = '0 16px 16px';
       this.card.appendChild(this.content);
