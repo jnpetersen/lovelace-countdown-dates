@@ -33,8 +33,7 @@ class CountdownCard extends HTMLElement {
         var daysLeft = (this.config.show_age ? "age " + age + ", " : "") + daysLeft;
       }
       
-      line += `<style>
-              </style>
+      line += `
               <div style="padding: 5px;">
                 <div class="countdown-name" style="float:left; width:65%">${element.name}</div>
                 <div class="countdown-date" style="text-align: right;">${daysLeft} ${this.phrase}</div>
