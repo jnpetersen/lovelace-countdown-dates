@@ -1,0 +1,9 @@
+{
+  "lovelace-countdown-dates": {
+    "updated_at": "2019-05-14",
+    "version": "0.1.0",
+    "remote_location": "https://raw.githubusercontent.com/jnpetersen/lovelace-countdown-dates/master/lovelace-countdown-dates.js",
+    "visit_repo": "https://github.com/jnpetersen/lovelace-countdown-dates",
+    "changelog": "https://github.com/jnpetersen/lovelace-countdown-dates"
+  }
+}
