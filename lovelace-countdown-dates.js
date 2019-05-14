@@ -1,9 +1,7 @@
 class CountdownCard extends HTMLElement {
 
   set hass(hass) {
-    if (!this.config.title) {
-      this.card.header = "Countdown";
-    } else {
+    if (this.config.title) {
       this.card.header = this.config.title;
     }
     if (!this.config.phrase) {
@@ -13,11 +11,34 @@ class CountdownCard extends HTMLElement {
     }
     var line = "";
     this.dates.forEach(element => {
-      var daysLeft = this.date_diff(element.date);
-      line += `<div>
-                  <div class="info" style="float:left; width:65%">${element.name}</div>
-                  <div class="info" style="text-align: right;">${daysLeft} ${this.phrase}</div>
-                </div>
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var eventDate = new Date(element.date);
+      var dd = String(eventDate.getDate()).padStart(2, '0');
+      var mm = String(eventDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = eventDate.getFullYear();
+
+      var age = (todayYear - yyyy) - 1;
+      var eventToday = mm + '/' + dd + '/' + (age > -1 ? today.getFullYear() : yyyy);
+
+      // console.log(this.date_diff(eventToday));
+
+      var daysLeft = this.date_diff(eventToday);
+      if (daysLeft < 0) {
+        age = age + 1;
+        daysLeft = this.date_diff(mm + '/' + dd + '/' + parseInt(todayYear+1));
+      }
+
+      if (age > -1) {
+        var daysLeft = (this.config.show_age ? "age " + age + ", " : "") + daysLeft;
+      }
+      
+      line += `<style>
+              </style>
+              <div style="padding: 5px;">
+                <div class="countdown-name" style="float:left; width:65%">${element.name}</div>
+                <div class="countdown-date" style="text-align: right;">${daysLeft} ${this.phrase}</div>
+              </div>
               `;
 
     });
@@ -54,7 +75,7 @@ class CountdownCard extends HTMLElement {
   }
 
   getCardSize() {
-    return 'getCardSize' in this.lastChild ? this.lastChild.getCardSize() : 1;
+    return 1;
   }
 }
 

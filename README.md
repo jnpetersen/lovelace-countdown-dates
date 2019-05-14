@@ -6,8 +6,9 @@ Custom Lovelace card to allow you to count down to the number of days an event w
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
 | type | string | **Required** | `custom:countdown-dates`
-| title | string | optional | Give your card a new title (default: Countdown)
-| phrase | string | optional | Phrase to place after number of days (default: )
+| title | string | optional | Give your card a new title (`default: Countdown`)
+| phrase | string | optional | Phrase to place after number of days (`default: days left`)
+| show_age | boolean | optional | If you want to hide age, specify `false`
 | dates | object | **Required** | Object to create events
 
 Dates object
@@ -27,10 +28,11 @@ resources:
 ```yaml
 - type: custom:countdown-dates
   title: 'Birthdays'
+  show_age: false
   phrase: 'days left'
   dates:
-    - date: 10/25/2019
+    - date: 10/25/1982
       name: Birthday
-    - date: 7/1/2019
+    - date: 7/1/2014
       name: Anniversary
 ```
