@@ -29,8 +29,8 @@ resources:
   title: 'Birthdays'
   phrase: 'days left'
   dates:
-		- date: 10/25/2019
-			name: Birthday
-		- date: 7/1/2019
-			name: Anniversary
+    - date: 10/25/2019
+      name: Birthday
+    - date: 7/1/2019
+      name: Anniversary
 ```
