@@ -24,18 +24,19 @@ Dates object
 ```yaml
 resources:
   - type: js
-    url: /local/lovelace-countdown-dates/lovelace-countdown-dates.js?v=1
+    url: /local/lovelace-countdown-dates/lovelace-countdown-dates.js?track=true
 ```
 
 ## Example
 ```yaml
-- type: custom:countdown-dates
-  title: 'Birthdays'
-  show_age: false
-  phrase: 'days left'
-  dates:
-    - date: 10/25/1982
-      name: Birthday
-    - date: 7/1/2014
-      name: Anniversary
+type: custom:countdown-dates
+title: 'Birthdays'
+show_age: false
+phrase: 'days left'
+dates:
+  - date: 10/25/1982
+    name: Birthday
+    icon: 'mdi:cake'
+  - date: 7/1/2014
+    name: Anniversary
 ```
