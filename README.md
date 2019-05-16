@@ -24,7 +24,7 @@ Dates object
 ```yaml
 resources:
   - type: js
-    url: /local/lovelace-countdown-dates/lovelace-countdown-dates.js?v=1
+    url: /local/lovelace-countdown-dates/lovelace-countdown-dates.js?track=true
 ```
 
 ## Example
