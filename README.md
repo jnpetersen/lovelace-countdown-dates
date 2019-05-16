@@ -17,6 +17,9 @@ Dates object
 | ---- | ---- | ------- | -----------
 | date | string | **Required** | A date value (i.e. 5/14/2019)
 | name | object | **Required** | Give your event a name so you know what its for
+| icon | string | optional | If you would like to use an [mdi] icon, specify it here
+
+[mdi]: https://materialdesignicons.com/
 
 ```yaml
 resources:

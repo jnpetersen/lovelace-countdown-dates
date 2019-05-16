@@ -34,17 +34,17 @@ class CountdownCard extends HTMLElement {
       }
       
       line += `
-              <div style="padding: 5px;">
-                
-                <div class="countdown-name" style="float:left; width:65%"><ha-icon icon="${element.icon ? element.icon : ""}"></ha-icon> ${element.name}</div>
-                <div class="countdown-date" style="text-align: right;">${daysLeft} ${this.phrase}</div>
+              <div style="padding: 5px;" class="row">
+                <div class="icon"><ha-icon icon="${element.icon ? element.icon : ""}"></ha-icon></div>
+                <div class="name">${element.name}</div>
+                <div class="data">${daysLeft} ${this.phrase}</div>
               </div>
               `;
 
     });
       
 
-    this.content.innerHTML = line;
+    this.content.innerHTML = this._renderStyle() + line;
   }
 
   setConfig(config) {
@@ -59,6 +59,38 @@ class CountdownCard extends HTMLElement {
       this.appendChild(this.card);
     }
 
+  }
+
+  _renderStyle() {
+    return `
+      <style>
+      .row
+      {
+        display: table;
+        width: 100%; /*Optional*/
+        table-layout: fixed; /*Optional*/
+        border-spacing: 5px; /*Optional*/
+        vertical-align: middle;
+      }
+      .row .icon
+      {
+        width: 24px;
+        display: table-cell;
+        
+      }
+
+      .row .name
+      {
+        display: table-cell;
+        line-height: 1.5pt;
+      }
+      .row .data
+      {
+        display: table-cell;
+        text-align: right;
+      }
+      </style>
+    `;
   }
 
   date_diff(target) {
