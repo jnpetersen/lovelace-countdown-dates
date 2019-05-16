@@ -35,8 +35,8 @@ class CountdownCard extends HTMLElement {
       
       line += `
               <div style="padding: 5px;">
-                <ha-icon icon="${element.icon ? element.icon : ""}"></ha-icon>
-                <div class="countdown-name" style="float:left; width:65%">${element.name}</div>
+                
+                <div class="countdown-name" style="float:left; width:65%"><ha-icon icon="${element.icon ? element.icon : ""}"></ha-icon> ${element.name}</div>
                 <div class="countdown-date" style="text-align: right;">${daysLeft} ${this.phrase}</div>
               </div>
               `;
