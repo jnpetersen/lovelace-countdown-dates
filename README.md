@@ -29,13 +29,14 @@ resources:
 
 ## Example
 ```yaml
-- type: custom:countdown-dates
-  title: 'Birthdays'
-  show_age: false
-  phrase: 'days left'
-  dates:
-    - date: 10/25/1982
-      name: Birthday
-    - date: 7/1/2014
-      name: Anniversary
+type: custom:countdown-dates
+title: 'Birthdays'
+show_age: false
+phrase: 'days left'
+dates:
+  - date: 10/25/1982
+    name: Birthday
+    icon: 'mdi:cake'
+  - date: 7/1/2014
+    name: Anniversary
 ```
