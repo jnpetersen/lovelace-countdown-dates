@@ -1,4 +1,8 @@
 # Countdown Dates
+
+<a href="https://www.buymeacoffee.com/mKIOQX3Re" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
+
 Custom Lovelace card to allow you to count down to the number of days an event will be happening
 
 ## Options
