@@ -25,6 +25,17 @@ Dates object
 
 [mdi]: https://materialdesignicons.com/
 
+You'll want to add this to your `custom_updater:` section.
+
+```yaml
+custom_updater:
+  track:
+    - cards
+  card_urls:
+    - https://raw.githubusercontent.com/jnpetersen/lovelace-countdown-dates/master/custom_cards.json
+```
+
+
 ```yaml
 resources:
   - type: js
