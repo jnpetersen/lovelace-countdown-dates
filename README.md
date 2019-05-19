@@ -35,12 +35,15 @@ custom_updater:
     - https://raw.githubusercontent.com/jnpetersen/lovelace-countdown-dates/master/custom_cards.json
 ```
 
+Inside your Configure UI section, Raw config editor, add the following:
 
 ```yaml
 resources:
   - type: js
     url: /local/lovelace-countdown-dates/lovelace-countdown-dates.js?track=true
 ```
+
+If your lovelace code:
 
 ## Example
 ```yaml
